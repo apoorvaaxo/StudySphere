@@ -1,23 +1,15 @@
 /* General Styles */
-
-/* Expanded Palette */
-/* Primary Color: #080705 (Rich Black)
-Use for primary backgrounds, footer, or header. 
-Secondary Color: #FAFAFA (Soft White)
-Use for main content areas, card backgrounds, or sections that require high readability.
-Accent Color: #FF6F61 (Coral Red)
-Adds vibrancy for call-to-action buttons, links, or highlights.
-Neutral Tone: #E0E0E0 (Light Gray)
-For subtle borders, dividers, or secondary content backgrounds.
-Interactive Highlight: #2B7A78 (Teal)
-Use for hover states, icons, or secondary buttons. */
-
-/* Reset and General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Hide horizontal scrollbars */
 }
 
 section {
@@ -71,7 +63,6 @@ header .logo {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
-    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -79,37 +70,95 @@ header .navigation a {
     margin-left: 1rem;
     text-decoration: none;
     color: #080705;
-    text-decoration: none;
     font-weight: 400;
     letter-spacing: 1px;
-    padding: 2px 15px;
+    padding: 7px 25px;
     border-radius: 70px;
-    padding: 7px;
-    padding-left: 25px;
-    padding-right: 25px;
     transition: 0.3s;
-    transition-property: background;
-   
-}
-
-header .navigation a:not(:last-child) {
-    margin-right: 30px;
 }
 
 header .navigation a:hover {
-    color:#FF6F61;
+    color: #FF6F61;
 }
-/* Specific styling for the Login button */
+
 header .navigation a.btn-login {
     background-color: #080705;
     color: #ffffff;
 }
 
-/* Hover effect for the Login button */
 header .navigation a.btn-login:hover {
     background-color: #080705;
     color: #FF6F61;
 }
+
+.Features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: justify;
+    height: 4rem;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.text-section {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.text-section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+   text-align: center;
+}
+
+.text-section p {
+    font-size: 16px;
+}
+
+/*
+.content .info-btn {
+    color: #fff;
+    background: #080705;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.content .info-btn:hover {
+    background: #FF6F61;
+}
+*/
+/* Style for the "Get Started" button */
+.get-started {
+    background-color: #080705; /* Default background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    margin-top: 2rem;
+    margin-left: 19rem;
+  }
+  
+  .get-started:hover {
+    background-color: #FF6F61; /* Hover color */
+  }
+  
+
 /* Content Styles */
 .content {
     flex-direction: column;
@@ -132,7 +181,6 @@ header .navigation a.btn-login:hover {
 }
 
 .content .info h2 span {
-    
     color: #FF6F61;
     font-size: 50px;
     font-weight: 800;
@@ -148,41 +196,17 @@ header .navigation a.btn-login:hover {
     color: #fff;
     background: #080705;
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 2px;
     padding: 10px 20px;
     border-radius: 5px;
     transition: 0.3s;
-    transition-property: background;
 }
 
 .content .info-btn:hover {
     background: #FF6F61;
 }
 
-.media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-}
-
-.media-icons a {
-    position: relative;
-    color: #111;
-    font-size: 25px;
-    transition: 0.3s;
-    transition-property: transform;
-}
-
-.media-icons a:not(:last-child) {
-    margin-right: 60px;
-}
-
-.media-icons a:hover {
-    transform: scale(1.5);
-}
 
 label {
     display: none;
@@ -193,8 +217,174 @@ label {
     display: none;
 }
 
-/* Responsive styles*/
+/* About Section Styles */
+.AboutContainer {
+    width: 100%;
+   
+    background-color: #080705;
+    height: 90rem;
+}
 
+.AboutContainer .title {
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.AboutContainer .title h1 {
+    color: #FF6F61;
+}
+
+.AboutContent {
+    width: 70%;
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    margin: 30px auto;
+}
+
+/* Glassmorphic Container - Combining Article and Image */
+.glassmorphic-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content horizontally */
+    background: rgba(255, 255, 255, 0.812); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Applies the blur effect */
+    padding: 30px;
+    margin: 20px 60px;
+    margin-left: -20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    color: #080705; /* Text color */
+    width: 100%;
+   
+}
+
+/* Article Section in the Glassmorphic Container */
+.glassmorphic-container .Article {
+    width: 100%; /* Make the article take full width */
+    max-width: 700px; /* Controls text width */
+    margin-bottom: 20px; /* Space between article and image */
+}
+
+.glassmorphic-container .Article h2 {
+    color: #080705;
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.glassmorphic-container .Article p {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #080705;
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* Image Section in the Glassmorphic Container */
+.glassmorphic-container .image-section {
+    width: 100%; /* Make image take full width of the container */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Image Styles */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact{
+    min-height: auto;  
+    background:#080705;
+}
+
+.contact h2{
+   margin-left: 3rem;
+   margin-top: 3rem;
+   color: #ddd;
+}
+
+.contactform {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30rem;
+    width: 30rem;
+}
+
+
+.contactform input,
+.contactform textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contactform textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #c6bebe;
+    color: #080705;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 3rem;
+}
+
+.submit-btn:hover {
+    background-color: #FF6F61;
+}
+
+
+  .social-links {
+    margin-top: 20px;
+    text-align: center;
+    margin-right: 55rem;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .social-links a:hover {
+    color:#FF6F61; /* Change color on hover */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
 @media (max-width: 960px) {
     header .navigation {
         display: none;
@@ -204,22 +394,17 @@ label {
         display: block;
         font-size: 25px;
         cursor: pointer;
-        transition: 0.3s;
-        transition-property: color;
+        transition: color 0.3s;
     }
 
     label:hover {
-        color: #fff;
-    }
-
-    label .close-btn {
-        display: none;
+        color: #FF6F61;
     }
 
     #check:checked ~ header .navigation {
         z-index: 2;
         position: fixed;
-        background: rgba(114, 223, 255, 0.9);
+        background: rgba(255, 111, 97, 0.9);
         top: 0;
         bottom: 0;
         left: 0;
@@ -230,136 +415,98 @@ label {
         align-items: center;
     }
 
-    #check:checked ~ header .navigation a {
-        font-weight: 700;
-        margin-right: 0;
-        margin-bottom: 50px;
-        letter-spacing: 2px;
-    }
-
     #check:checked ~ header label .menu-btn {
         display: none;
     }
 
-    #check:checked ~ header label .close-btn {
-        z-index: 2;
-        display: block;
-        position: fixed;
+    .content .info h2 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem); /* Dynamic scaling */
+        line-height: 1.2;
     }
 
-    label .menu-btn {
-        position: absolute;
+    .content .info p {
+        font-size: clamp(0.9rem, 3vw, 1rem); /* Improved readability */
+    }
+
+    .hero-svg {
+        width: 60%;
+    }
+
+    .AboutContent {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .glassmorphic-container {
+        padding: 15px;
+    }
+
+    .AboutContent .Article {
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero-svg {
+        width: 70%;
     }
 
     header .logo {
-        position: absolute;
-        bottom: -6px;
-    }
-
-    .content .info h2 {
-        font-size: 45px;
-        line-height: 50px;
-    }
-
-    .content .info h2 span {
-        font-size: 40px;
-        font-weight: 600;
-    }
-
-    .content .info p {
-        font-size: 14px;
-    }
-
-    .hero-svg {
-        width: 50%; /* Adjust width to 50% for medium screens */
+        font-size: 24px;
     }
 }
 
-.About{
-    text-align: center;
-    padding-left: 9rem;
-    padding-right: 9rem;
-}
-.About .p3{
-    font-size: small;
-}
-
-.AboutContent1{
-    text-align: justify;
-    margin-left: 5rem;
-    margin-top: 3rem;
-    
-}
-
-.image {
-    position: relative;
-    top: -90px; /* Moves the image up by 50px */
-    left: 300px; /* Keeps the image centered horizontally */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
-    .hero-svg {
-        width: 60%; /* Adjust width to 60% for smaller tablets */
-    }
-}
-
-/* For mobile screens (below 560px) */
 @media (max-width: 560px) {
     .content .info h2 {
-        font-size: 35px;
-        line-height: 40px;
-    }
-
-    .content .info h2 span {
-        font-size: 30px;
+        font-size: clamp(2rem, 4vw, 2.5rem);
     }
 
     .content .info p {
-        font-size: 14px;
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
     }
 
     .hero-svg {
-        width: 80%; /* Adjust width to 80% for smaller screens (phones) */
-        bottom: 10px; /* Ensure it doesn't go off the screen */
-        margin-top: 1rem;
-    }
-
-    .content .info-btn {
-        font-size: 14px; /* Adjust button font size for mobile */
-    }
-}
-
-/* For extra small mobile devices */
-@media (max-width: 375px) {
-    .hero-svg {
-        width: 90%;  /* Adjust width to 90% for very small screens */
+        width: 80%;
     }
 
     header {
-        padding: 20px 30px; /* Reduce padding for smaller devices */
+        padding: 15px 20px;
+    }
+
+    .glassmorphic-container .Article {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-svg {
+        width: 90%;
+    }
+
+    header {
+        padding: 10px 15px;
     }
 
     header .logo {
-        font-size: 25px; /* Adjust logo size for small screens */
+        font-size: 20px;
     }
 
     header .navigation a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        padding: 8px 12px;
+        font-size: 12px;
+        padding: 5px 10px;
     }
 
     .content .info-btn {
-        padding: 8px 16px;
+        padding: 6px 12px;
+    }
+
+    .glassmorphic-container {
+        padding: 10px;
+    }
+
+    .AboutContent {
+        width: 90%;
+        padding: 10px;
     }
 }
